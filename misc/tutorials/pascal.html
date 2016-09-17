@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Pascal's Triangle</title>
+</head>
+
+<body>
+
+<h1>Pascal's Triangle</h1>
+
+	<script>
+	function printNextLine() {
+		var table = document.getElementById("triangle");
+		var finalRow = table.rows[table.rows.length - 1];
+		var newRow = table.insertRow(-1);
+		
+		var firstCell = newRow.insertCell(-1);
+		firstCell.innerHTML = 1;
+
+		for (var i = 0; i < finalRow.cells.length - 1; i++) {
+			var cell = newRow.insertCell(-1);
+			cell.innerHTML = parseInt(finalRow.cells[i].innerHTML) + parseInt(finalRow.cells[i+1].innerHTML);
+		}
+
+		var finalCell = newRow.insertCell(-1);
+		finalCell.innerHTML = 1;
+	}
+	
+	function test() {
+		var table = document.getElementById("triangle");
+		var finalRow = table.rows[table.rows.length - 1];
+		var newRow = table.insertRow(-1);
+		var cell = newRow.insertCell(-1);
+
+		cell.innerHTML = finalRow.cells[0].innerHTML;
+	}
+
+	</script>
+	
+	<button onclick="printNextLine()">Next</button>
+
+	<table id="triangle">
+		<tbody>
+			<tr>
+				<td>1</td>
+			</tr>
+		</tbody>
+	</table>
+	
+</body>
+
+</html>

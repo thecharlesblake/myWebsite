@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="light.css">
+	<title>Charlie's Light</title>
+</head>
+
+<body onload="setup()" bgcolor="#E6E6FA">
+<div id="wrap">
+
+	<h1>Control Charlie's Light</h1>
+	<p id="status_msg"></p>
+	<div><button id="toggle" type="button" onclick="toggle()"></button></div>
+	
+	<div id="optional">
+		<div><button id="color_picker" class="jscolor {valueElement:null}">
+		Pick a colour for the room!</button></div>
+		
+		<div><button id="color_setter" type="button" onclick="setColor()">
+		Set the room to that colour</button></div>
+	</div>	
+</div>
+
+<script src="Colour.js"></script>
+<script src="light.js"></script>
+<script src="jscolor/jscolor.js"></script>
+</body>
+</html>

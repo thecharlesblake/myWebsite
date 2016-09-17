@@ -1,0 +1,140 @@
+body {
+    color: black;
+    font-family: HelveticaNeue-Light, Calibri, DroidSans, HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    padding: 0.2rem;
+}
+
+.msg_board {
+}
+
+.msg_board .contact_selector {
+    
+}
+
+.msg_board .message_interface {
+    font-size: 22px;
+    vertical-align: top;
+    
+}
+
+.contacts_wrapper {
+    direction: rtl;
+    height: 80vh;
+    overflow: auto; 
+    display: inline-block;
+}
+
+.class_table {
+    direction: ltr;
+    border-collapse: collapse;
+}
+
+.class_table .contact_row:hover, .class_table .contact_row:nth-child(odd):hover{
+    background: lightsteelblue;
+}
+
+.class_table .contact_row:nth-child(odd) {
+    background:   #f2f2f2;
+}
+
+.class_table td {
+    padding: 0.7rem;
+}
+
+.class_table th {
+    padding: 0.3rem;
+    background: dodgerblue;
+    color: white;
+}
+
+.class_table .optional {
+    display: none;
+}
+
+.class_table .options_button {
+    border: 1px solid transparent;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    background: transparent;
+    font-size: 26px;
+    font-weight: bold;
+    color: green;
+}
+
+.class_table .options_button:hover {
+    border: 1px solid transparent;
+    background: green;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+}
+
+.class_table .contact_row.selected, .class_table .contact_row:nth-child(odd).selected {
+    background: steelblue;
+}
+
+.class_table .contact_row.selected:hover, .class_table .contact_row:nth-child(odd).selected:hover {
+    background: steelblue;
+}
+
+sender {
+  color: green;
+  margin: 0 0.25rem 0.25rem 0;
+  display: inline-block;
+}
+
+to {
+  color: gray;
+  margin: 0 0.25rem 0.25rem 0;
+  display: inline-block;
+}
+
+receiver {
+  color: orange;
+  margin: 0 0.25rem 0.25rem 0;
+  display: inline-block;
+}
+
+timestamp {
+  color: gray;
+  font-size: 0.6rem;
+  margin: 0 0.25rem 0.25rem 0;
+  display: inline-block;
+}
+
+id {
+  color: lightsteelblue;
+  font-size: 0.6rem;
+  margin: 0 0.25rem 0.25rem 0;
+  display: inline-block;
+}
+
+text {
+  color: navy;
+  padding: 0.1rem;
+  display: block;
+}
+
+errorMsg {
+  color: red;
+  padding: 0.1rem;
+  display: block;
+}
+
+message {
+  display: block;
+}
+
+#messages message:nth-child(odd) { background: lightyellow; }
+
+*[state="bad"] { background-color: lightcoral; }
+*[state="good"] { background-color: palegreen; }  
+
+.information {
+  color: white;
+  background-color: steelblue;
+  padding: 0.25rem;
+  border-radius: 0.15rem;
+  display: inline-block;
+}

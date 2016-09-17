@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>The Business Card Creator</title>
+</head>
+
+<body>
+
+<h1>The Business Card Creator</h1>
+
+<p>Enter some information below</p>
+
+<form id="businesscard" method="post" action="businesscard.php">
+
+    <fieldset>
+        <legend>Who are you?</legend>
+      
+        <p>
+        <label for="firstname">Firstname:</label>
+        <input required autofocus name="firstname" id="firstname" type="text" />
+        </p>
+
+        <p>
+        <label for="lastname">Lastname:</label>
+        <input required name="lastname" id="lastname" type="text" />
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>What are your contact details?</legend>
+      
+        <p>
+        <label for="email">Email:</label>
+        <input required name="email" id="email" type="email" />
+        </p>
+
+        <p>
+        <label for="telephone">Telephone:</label>
+        <input name="telephone" id="telephone" type="tel" />
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>How do you want the text to look?</legend>
+
+        <p>
+        <label for="colour">Colour:</label>
+        <input required name="colour" id="colour" type="color">
+        </p>
+
+        <p>
+        <label for="font">Font:</label>
+        <select required name="font" id="font">
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Palatino">Palatino</option>
+            <option value="Papyrus">Papyrus</option>
+            <option value="Impact">Impact</option>
+        </select>
+    </fieldset>
+
+</form>
+
+<br />
+
+<button form="businesscard" type="submit">Submit</button><br />
+<button form="businesscard" type="reset">Reset</button>
+
+</body>
+
+</html>

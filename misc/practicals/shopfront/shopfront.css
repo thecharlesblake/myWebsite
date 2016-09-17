@@ -1,0 +1,90 @@
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	background: #9BAFB7;
+	color: #21495A;
+	text-align: center;
+}
+
+h1, h2, h3 {
+	font-family: Georgia, serif;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+table {
+	margin: auto;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+#orderTable thead {
+	font-size: 1.2rem;
+	font-family: Georgia, serif;
+	text-align: center;
+	background-color: #21495A;
+	color: #E7ECED;
+}
+
+#orderTable th {
+	padding: 1rem;
+}
+
+#orderTable td {
+	background-color: #FFFFFF;
+}
+
+#orderTable tr:nth-child(odd) td {
+	background-color: #E7ECED;
+}
+
+#orderTable tr:nth-child(odd) input {
+	background-color: #FFFFFF;
+}
+
+#orderTable tr:nth-child(even) input {
+	background-color: #E7ECED;	
+}
+
+#orderTable .photo {
+	text-align: center;
+}
+
+#orderTable .item {
+	font-weight: bold;
+}
+
+#orderTable .description {
+	font-family: Georgia, serif;
+	font-style: italic;
+}
+
+#orderTable .cost input {
+	border-color: transparent;	
+}
+
+td {
+	padding: 1rem;
+}
+
+td img {
+	display: inline-block;
+}
+
+input {
+	font-size: 1.1rem;
+	color: #21495A;
+	padding: 0.3rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+input:valid {
+	background-color: #AED6AE;
+	border-color: transparent;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Scope 5</title>
+</head>
+
+<body>
+
+<h1>Scope 5</h1>
+
+<p>Look at the Javascript in the source to see what is happening.</p>
+
+<script>
+	var scope = "global";
+	
+	function f() {
+    alert(scope);
+    var scope = "local"; /* remove and see what happens! */
+	  alert(scope);
+	}
+	f();
+</script>
+
+</body>
+
+</html>

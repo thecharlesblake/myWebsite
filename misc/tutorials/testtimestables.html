@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Times Tables Tester</title>
+</head>
+
+<body onload="newNums()">
+
+<h1>Times Tables Tester</h1>
+
+	<script>
+	var n1;
+	var n2;
+
+	function timesTableNum() {
+		return Math.floor(12 * Math.random() + 1);
+	}
+	
+	function newNums() {	
+		n1 = timesTableNum();
+		n2 = timesTableNum();
+		document.getElementById("sum").innerHTML = n1 + " x " + n2 + " = ";
+	}
+
+	function check() {
+		var answer = document.getElementById("textbox").value;
+		if (answer == n1 * n2) {
+			document.getElementById("resultMsg").innerHTML = "Correct";
+			newNums();
+		} else {
+			document.getElementById("resultMsg").innerHTML = "Incorrect";
+		}
+	}
+	</script>	
+	
+	<span id="sum"></span><input autofocus type="number" id="textbox">
+	<p id="resultMsg"></p>	
+	<p><button onclick="check()">Check</button></p>
+	<p><button onclick="newNums()">New</button></p>
+</body>

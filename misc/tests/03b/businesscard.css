@@ -1,0 +1,36 @@
+
+/*
+ * Business Card demo
+ * Saleem Bhatti, saleem@st-andrews.ac.uk
+ * Aug 2014
+ */
+
+
+businesscard {
+    font-size: 20px;
+    border: 0.2em solid black;
+    padding: 4em;
+    width: 16em;
+}
+
+businesscard, name, email, telephone {
+    display: block;
+}
+
+
+name {
+    font-size: 2.4em;
+}
+
+email, telephone {
+    font-size: 1.2em;
+}
+
+email:before {
+    content: "\2709 \00a0 ";
+}
+
+telephone:before {
+    content: "\2706 \00a0 ";
+}
+
