@@ -87,10 +87,10 @@ html, body {
     -moz-box-shadow: 0 0 18px white; 
 }
 #about {
-    background-color: #FFF9CC;
+    background-color: #fff;
 }
 #about h2 {
-    color: #723B17;
+    color: #2e4453;
 }
 #about p {
     font-family: 'Raleway';
@@ -99,17 +99,18 @@ html, body {
     line-height: 1.8;
     margin-top: 30px;
     margin-bottom: 30px;
+    color: #4f748e;
 }
 #about img {
     max-height: 390px;
     width: auto;
 }
 #skills {
-  background-color: #77B9E8;
-  color: white;
+  background-color: #e9eff3;
+  color: #4f748e;
 }
 #skills h2 {
-    color: #fff9CC;
+    color: #1c2932;
     margin-bottom: 40px;
 }
 #skills img {
@@ -119,6 +120,7 @@ html, body {
     margin-bottom: 30px;
 }
 #cv {
+    display: none;
     background-color: #723B17;
 }
 #cv h2 {
@@ -186,7 +188,7 @@ footer .glyphicon:hover {
     border: 0px;
 }
 .navbar-default {
-    background-color: #232323;
+    background-color: #0087be;
 }
 .navbar-transparent {
     background-color: transparent;
