@@ -1,5 +1,7 @@
 * {
-  font-family: "Raleway"; }
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 18px; }
 
 html, body {
   background-color: black;
@@ -10,10 +12,26 @@ h2 {
   font-size: 48px;
   font-weight: 900; }
 
-.pad-section {
+.pad-section, .section-type-A, .section-type-B {
   padding: 80px 0; }
-  .pad-section img {
-    width: 100%; }
+  .pad-section p, .section-type-A p, .section-type-B p {
+    line-height: 1.8;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+
+.section-type-A {
+  background-color: white; }
+  .section-type-A h2 {
+    color: #2e4453; }
+  .section-type-A p {
+    color: #4f748e; }
+
+.section-type-B {
+  background-color: #e9eff3; }
+  .section-type-B h2 {
+    color: #1c2932; }
+  .section-type-B p {
+    color: #4f748e; }
 
 #home-wrapper {
   background: url(images/london_cover.jpg) no-repeat center center;
@@ -77,33 +95,15 @@ h2 {
       -o-box-shadow: 0 0 18px white;
       box-shadow: 0 0 18px white; }
 
-#about {
-  background-color: #fff; }
-  #about h2 {
-    color: #2e4453; }
-  #about p {
-    font-family: "Raleway";
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.8;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: #4f748e; }
-  #about img {
-    max-height: 390px;
-    width: auto; }
+#about img {
+  max-height: 390px;
+  width: auto; }
 
-#skills {
-  background-color: #e9eff3;
-  color: #4f748e; }
-  #skills h2 {
-    color: #1c2932;
-    margin-bottom: 40px; }
-  #skills img {
-    max-height: 200px;
-    max-width: 200px;
-    margin-top: 30px;
-    margin-bottom: 30px; }
+#skills img {
+  max-height: 200px;
+  max-width: 200px;
+  margin-top: 30px;
+  margin-bottom: 30px; }
 
 #cv {
   display: none;

@@ -1,9 +1,24 @@
 $main-typeface: 'Raleway'
 $formal-typeface: 'Julius Sans One', sans-serif
 
+$background-A: white
+$background-B: #e9eff3
+$dark-A: #2e4453
+$dark-B: #1c2932
+$light: #4f748e
+
+=platforms($attribute, $value)
+  -webkit-#{$attribute}: $value /* Safari, Chrome and Opera > 12.1 */
+  -moz-#{$attribute}: $value /* Firefox < 16 */
+  -ms-#{$attribute}: $value /* Internet Explorer */
+  -o-#{$attribute}: $value /* Opera < 12.1 */
+  #{$attribute}: $value
+
 // --- General ---
 *
   font-family: $main-typeface
+  font-weight: 400
+  font-size: 18px
 
 html, body
   background-color: black
@@ -16,16 +31,30 @@ h2
 
 .pad-section
   padding: 80px 0
-  
-  img
-    width: 100%
 
-=platforms($attribute, $value)
-  -webkit-#{$attribute}: $value /* Safari, Chrome and Opera > 12.1 */
-  -moz-#{$attribute}: $value /* Firefox < 16 */
-  -ms-#{$attribute}: $value /* Internet Explorer */
-  -o-#{$attribute}: $value /* Opera < 12.1 */
-  #{$attribute}: $value
+  p
+    line-height: 1.8
+    margin-top: 30px
+    margin-bottom: 30px
+
+.section-type-A
+  @extend .pad-section
+
+  background-color: $background-A
+  h2
+    color: $dark-A
+  p 
+    color: $light
+
+.section-type-B
+  @extend .pad-section
+
+  background-color: $background-B
+  h2
+    color: $dark-B
+  p
+    color: $light
+
 
 // --- Home Section ---
 $home-image: "images/london_cover.jpg"
@@ -84,41 +113,21 @@ $home-image: "images/london_cover.jpg"
       background-color: rgba(0,0,0,0.5)
       +platforms(box-shadow, 0 0 18px white)
 
-//DOne up to here
+// --- Section-specific ---
 
 #about
-  background-color: #fff
-
-  h2
-    color: #2e4453
-
-  p 
-    font-family: $main-typeface
-    font-weight: 400
-    font-size: 18px
-    line-height: 1.8
-    margin-top: 30px
-    margin-bottom: 30px
-    color: #4f748e
-
   img
     max-height: 390px
     width: auto
 
 #skills
-  background-color: #e9eff3
-  color: #4f748e
-
-  h2
-    color: #1c2932
-    margin-bottom: 40px
-
   img
     max-height: 200px
     max-width: 200px
     margin-top: 30px
     margin-bottom: 30px
 
+// CURRENTLY HIDDEN
 #cv
   display: none
   background-color: #723B17
