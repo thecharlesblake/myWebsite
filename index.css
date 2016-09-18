@@ -1,3 +1,6 @@
+* {
+  font-family: "Raleway"; }
+
 html, body {
   background-color: black;
   height: 100%;
@@ -9,25 +12,8 @@ h2 {
 
 .pad-section {
   padding: 80px 0; }
-  .pad-section h2 {
-    font-family: "Raleway"; }
   .pad-section img {
     width: 100%; }
-
-#home {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  font-family: "Julius Sans One", sans-serif; }
-  #home h1 {
-    font-size: 60px; }
-  #home h3 {
-    font-size: 20px; }
-  @media (min-width: 900px) {
-    #home h1 {
-      font-size: 110px; }
-    #home h3 {
-      font-size: 28px; } }
 
 #home-wrapper {
   background: url(images/london_cover.jpg) no-repeat center center;
@@ -37,15 +23,31 @@ h2 {
   height: 100%;
   position: relative;
   width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: fadein 5s;
+  -moz-background-size: fadein 5s;
+  -ms-background-size: fadein 5s;
+  -o-background-size: fadein 5s;
+  background-size: fadein 5s;
   -webkit-animation: fadein 5s;
   -moz-animation: fadein 5s;
   -ms-animation: fadein 5s;
   -o-animation: fadein 5s;
   animation: fadein 5s; }
+  #home-wrapper, #home-wrapper * {
+    font-family: "Julius Sans One", sans-serif; }
+  #home-wrapper #home {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle; }
+    #home-wrapper #home h1 {
+      font-size: 60px; }
+    #home-wrapper #home h3 {
+      font-size: 20px; }
+    @media (min-width: 900px) {
+      #home-wrapper #home h1 {
+        font-size: 110px; }
+      #home-wrapper #home h3 {
+        font-size: 28px; } }
   #home-wrapper #down-arrow {
     color: white;
     background-color: rgba(0, 0, 0, 0.4);
@@ -65,12 +67,15 @@ h2 {
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
+    transform: rotate(90deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); }
-  #home-wrapper #down-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 18px white;
-    -webkit-box-shadow: 0 0 18px white;
-    -moz-box-shadow: 0 0 18px white; }
+    #home-wrapper #down-arrow:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 0 0 18px white;
+      -moz-box-shadow: 0 0 18px white;
+      -ms-box-shadow: 0 0 18px white;
+      -o-box-shadow: 0 0 18px white;
+      box-shadow: 0 0 18px white; }
 
 #about {
   background-color: #fff; }
@@ -170,7 +175,7 @@ footer {
 .navbar .navbar-nav > li > a {
   font-size: 16px; }
 .navbar .navbar-nav > li > a,
-.navbar .navbar .navbar-brand {
+.navbar .navbar-brand {
   text-transform: uppercase;
   font-family: "PT Sans", sans-serif;
   color: white; }
@@ -181,13 +186,16 @@ footer {
 .navbar .navbar-brand:focus {
   color: white; }
 
-.navbar-default .navbar-toggle .icon-bar, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:focus:hover {
+.navbar-default .navbar-toggle.icon-bar,
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus .icon-bar,
+.navbar-default .navbar-toggle:focus:hover {
   background-color: #ddd; }
-
-.navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus:hover .icon-bar {
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus:hover .icon-bar {
   background-color: #3D3D3D; }
-
-.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus {
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:focus {
   background-color: transparent; }
 
 @keyframes fadein {

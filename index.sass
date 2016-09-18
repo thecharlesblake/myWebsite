@@ -1,5 +1,9 @@
 $main-typeface: 'Raleway'
-$serif-typeface: 'Julius Sans One', sans-serif
+$formal-typeface: 'Julius Sans One', sans-serif
+
+// --- General ---
+*
+  font-family: $main-typeface
 
 html, body
   background-color: black
@@ -13,32 +17,21 @@ h2
 .pad-section
   padding: 80px 0
   
-  h2
-    font-family: $main-typeface
-    
   img
     width: 100%
 
-// rename at some point!
-#home
-  display: table-cell
-  text-align: center
-  vertical-align: middle
-  font-family: $serif-typeface
-  
-  h1
-    font-size: 60px
-  h3
-    font-size: 20px
+=platforms($attribute, $value)
+  -webkit-#{$attribute}: $value /* Safari, Chrome and Opera > 12.1 */
+  -moz-#{$attribute}: $value /* Firefox < 16 */
+  -ms-#{$attribute}: $value /* Internet Explorer */
+  -o-#{$attribute}: $value /* Opera < 12.1 */
+  #{$attribute}: $value
 
-  @media (min-width: 900px)
-    h1
-      font-size: 110px
-    h3
-      font-size: 28px
+// --- Home Section ---
+$home-image: "images/london_cover.jpg"
 
 #home-wrapper
-  background: url(images/london_cover.jpg) no-repeat center center
+  background: url(#{$home-image}) no-repeat center center
   background-attachment: fixed
   color: white
   display: table
@@ -46,16 +39,27 @@ h2
   position: relative
   width: 100%
 
-  -webkit-background-size: cover
-  -moz-background-size: cover
-  -o-background-size: cover
-  background-size: cover
+  &, *
+    font-family: $formal-typeface
+
+  +platforms(background-size, fadein 5s)
+  +platforms(animation, fadein 5s)
+
+  #home
+    display: table-cell
+    text-align: center
+    vertical-align: middle
   
-  -webkit-animation: fadein 5s /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 5s /* Firefox < 16 */
-  -ms-animation: fadein 5s /* Internet Explorer */
-  -o-animation: fadein 5s /* Opera < 12.1 */
-  animation: fadein 5s
+    h1
+      font-size: 60px
+    h3
+      font-size: 20px
+
+    @media (min-width: 900px)
+      h1
+        font-size: 110px
+      h3
+        font-size: 28px
 
   #down-arrow
     color: white
@@ -73,17 +77,14 @@ h2
     line-height: 58px
     width: 60px
 
-    -webkit-transform: rotate(90deg)
-    -moz-transform: rotate(90deg)
-    -ms-transform: rotate(90deg)
-    -o-transform: rotate(90deg)
+    +platforms(transform, rotate(90deg))
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1)
 
-  #down-arrow:hover
-    background-color: rgba(0,0,0,0.5)
-    box-shadow: 0 0 18px white
-    -webkit-box-shadow: 0 0 18px white
-    -moz-box-shadow: 0 0 18px white
+    &:hover
+      background-color: rgba(0,0,0,0.5)
+      +platforms(box-shadow, 0 0 18px white)
+
+//DOne up to here
 
 #about
   background-color: #fff
@@ -182,7 +183,7 @@ footer
   .glyphicon:hover
     color: #306d9f
 
-
+// --- Navbar ---
 .navbar
   border: 0px
 
@@ -200,11 +201,13 @@ footer
   .navbar-brand
     font-size: 20px
 
-  .navbar-nav > li > a
-    font-size: 16px
+  .navbar-nav
+    > li
+      > a
+        font-size: 16px
 
   .navbar-nav > li > a,
-  .navbar .navbar-brand
+  .navbar-brand
     text-transform: uppercase
     font-family: 'PT Sans', sans-serif
     color: white
@@ -217,15 +220,20 @@ footer
   .navbar-brand:focus
     color: white
 
-.navbar-default .navbar-toggle .icon-bar, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:focus:hover
-  background-color: #ddd
+.navbar-default
+  .navbar-toggle.icon-bar,
+  .navbar-toggle:hover,
+  .navbar-toggle:focus .icon-bar,
+  .navbar-toggle:focus:hover
+    background-color: #ddd
 
-.navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus:hover .icon-bar
-  background-color: #3D3D3D
+  .navbar-toggle:hover .icon-bar,
+  .navbar-toggle:focus:hover .icon-bar
+    background-color: #3D3D3D
 
-.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus
-  background-color: transparent
-
+  .navbar-toggle,
+  .navbar-toggle:focus
+    background-color: transparent
 
 @keyframes fadein
   from
