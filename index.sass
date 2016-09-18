@@ -1,11 +1,15 @@
 $main-typeface: 'Raleway'
 $formal-typeface: 'Julius Sans One', sans-serif
+$formal-typeface-2: 'PT Sans', sans-serif
 
-$background-A: white
-$background-B: #e9eff3
+$light: #4f748e
+$light-C: white
+$strong: #0087be
 $dark-A: #2e4453
 $dark-B: #1c2932
-$light: #4f748e
+$background-A: white
+$background-B: #e9eff3
+$background-C: $strong
 
 =platforms($attribute, $value)
   -webkit-#{$attribute}: $value /* Safari, Chrome and Opera > 12.1 */
@@ -43,6 +47,8 @@ h2
   background-color: $background-A
   h2
     color: $dark-A
+    padding-left: 15px
+    padding-right: 15px
   p 
     color: $light
 
@@ -54,6 +60,15 @@ h2
     color: $dark-B
   p
     color: $light
+
+.section-type-C
+  @extend .pad-section
+
+  background-color: $background-C
+  h2
+    color: $light-C
+  p
+    color: $light-C
 
 
 // --- Home Section ---
@@ -116,16 +131,26 @@ $home-image: "images/london_cover.jpg"
 // --- Section-specific ---
 
 #about
+  h2
+    text-align: right
   img
     max-height: 390px
     width: auto
 
 #skills
+  h2
+    text-align: center
+    margin-botton: 40px
+
   img
     max-height: 200px
     max-width: 200px
     margin-top: 30px
     margin-bottom: 30px
+
+#responsive
+  h2
+    text-align: left
 
 // CURRENTLY HIDDEN
 #cv
@@ -164,7 +189,6 @@ $home-image: "images/london_cover.jpg"
       margin-top: 0px
       margin-bottom: 40px
 
-
 #information
   background: url(images/circuit_span.jpg) no-repeat center center fixed
   display: table
@@ -193,18 +217,18 @@ footer
     color: #306d9f
 
 // --- Navbar ---
-.navbar
-  border: 0px
-
 .navbar-default
-  background-color: #0087be
+  background-color: $strong
+  border-bottom-width: 1px
+  border-bottom-color: darken($strong, 10%)
 
 .navbar-transparent
   background-color: transparent
+  border-bottom-width: 0px
 
 .navbar-semi,
 .navbar-transparent:hover
-  background-color: rgba(0,0,0,0.5)
+  background-color: rgba($strong ,0.5)
 
 .navbar
   .navbar-brand
@@ -218,31 +242,31 @@ footer
   .navbar-nav > li > a,
   .navbar-brand
     text-transform: uppercase
-    font-family: 'PT Sans', sans-serif
+    font-family: $formal-typeface-2
     color: white
 
   .navbar-nav > li > a:hover,
   .navbar-brand:hover
-    color: #B6B6B6
+    color: #aaa
 
   .navbar-nav > li > a:focus,
   .navbar-brand:focus
     color: white
 
 .navbar-default
-  .navbar-toggle.icon-bar,
   .navbar-toggle:hover,
-  .navbar-toggle:focus .icon-bar,
   .navbar-toggle:focus:hover
-    background-color: #ddd
+    background-color: white
 
+  .navbar-toggle.icon-bar,
+  .navbar-toggle:focus .icon-bar,
   .navbar-toggle:hover .icon-bar,
   .navbar-toggle:focus:hover .icon-bar
-    background-color: #3D3D3D
+    background-color: #aaa
 
   .navbar-toggle,
   .navbar-toggle:focus
-    background-color: transparent
+    background-color: white
 
 @keyframes fadein
   from

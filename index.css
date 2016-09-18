@@ -12,9 +12,9 @@ h2 {
   font-size: 48px;
   font-weight: 900; }
 
-.pad-section, .section-type-A, .section-type-B {
+.pad-section, .section-type-A, .section-type-B, .section-type-C {
   padding: 80px 0; }
-  .pad-section p, .section-type-A p, .section-type-B p {
+  .pad-section p, .section-type-A p, .section-type-B p, .section-type-C p {
     line-height: 1.8;
     margin-top: 30px;
     margin-bottom: 30px; }
@@ -22,7 +22,9 @@ h2 {
 .section-type-A {
   background-color: white; }
   .section-type-A h2 {
-    color: #2e4453; }
+    color: #2e4453;
+    padding-left: 15px;
+    padding-right: 15px; }
   .section-type-A p {
     color: #4f748e; }
 
@@ -32,6 +34,13 @@ h2 {
     color: #1c2932; }
   .section-type-B p {
     color: #4f748e; }
+
+.section-type-C {
+  background-color: #0087be; }
+  .section-type-C h2 {
+    color: white; }
+  .section-type-C p {
+    color: white; }
 
 #home-wrapper {
   background: url(images/london_cover.jpg) no-repeat center center;
@@ -95,15 +104,23 @@ h2 {
       -o-box-shadow: 0 0 18px white;
       box-shadow: 0 0 18px white; }
 
+#about h2 {
+  text-align: right; }
 #about img {
   max-height: 390px;
   width: auto; }
 
+#skills h2 {
+  text-align: center;
+  margin-botton: 40px; }
 #skills img {
   max-height: 200px;
   max-width: 200px;
   margin-top: 30px;
   margin-bottom: 30px; }
+
+#responsive h2 {
+  text-align: left; }
 
 #cv {
   display: none;
@@ -157,18 +174,18 @@ footer {
   footer .glyphicon:hover {
     color: #306d9f; }
 
-.navbar {
-  border: 0px; }
-
 .navbar-default {
-  background-color: #0087be; }
+  background-color: #0087be;
+  border-bottom-width: 1px;
+  border-bottom-color: #00638b; }
 
 .navbar-transparent {
-  background-color: transparent; }
+  background-color: transparent;
+  border-bottom-width: 0px; }
 
 .navbar-semi,
 .navbar-transparent:hover {
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 135, 190, 0.5); }
 
 .navbar .navbar-brand {
   font-size: 20px; }
@@ -181,22 +198,22 @@ footer {
   color: white; }
 .navbar .navbar-nav > li > a:hover,
 .navbar .navbar-brand:hover {
-  color: #B6B6B6; }
+  color: #aaa; }
 .navbar .navbar-nav > li > a:focus,
 .navbar .navbar-brand:focus {
   color: white; }
 
-.navbar-default .navbar-toggle.icon-bar,
 .navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus .icon-bar,
 .navbar-default .navbar-toggle:focus:hover {
-  background-color: #ddd; }
+  background-color: white; }
+.navbar-default .navbar-toggle.icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar,
 .navbar-default .navbar-toggle:hover .icon-bar,
 .navbar-default .navbar-toggle:focus:hover .icon-bar {
-  background-color: #3D3D3D; }
+  background-color: #aaa; }
 .navbar-default .navbar-toggle,
 .navbar-default .navbar-toggle:focus {
-  background-color: transparent; }
+  background-color: white; }
 
 @keyframes fadein {
   from {
