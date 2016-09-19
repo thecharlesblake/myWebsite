@@ -33,8 +33,19 @@ h2
   font-size: 48px
   font-weight: 900
 
+h3
+  font-size: 32px
+  font-weight: 900
+
 .pad-section
   padding: 80px 0
+
+  h2, h3
+    padding-left: 15px
+    padding-right: 15px
+
+  h3
+    margin-bottom: 30px
 
   p
     line-height: 1.8
@@ -45,10 +56,8 @@ h2
   @extend .pad-section
 
   background-color: $background-A
-  h2
+  h2, h3
     color: $dark-A
-    padding-left: 15px
-    padding-right: 15px
   p 
     color: $light
 
@@ -56,7 +65,7 @@ h2
   @extend .pad-section
 
   background-color: $background-B
-  h2
+  h2, h3
     color: $dark-B
   p
     color: $light
@@ -65,10 +74,12 @@ h2
   @extend .pad-section
 
   background-color: $background-C
-  h2
+  h2, h3
     color: $light-C
   p
     color: $light-C
+  a
+    color: #00fff7
 
 
 // --- Home Section ---
@@ -152,42 +163,60 @@ $home-image: "images/london_cover.jpg"
   h2
     text-align: left
 
-// CURRENTLY HIDDEN
-#cv
-  display: none
-  background-color: #723B17
-
+#projects
   h2
-    color: #77B9E8
-    margin-top: 32px
-  
+    text-align: center
+    margin-bottom: 20px
+
+#project-1
+  h3
+    color: $strong
+
+  .link-arrow
+    .glyphicon
+      color: $strong
+      border: 4px solid $strong
+
+  .link-arrow:hover
+    .glyphicon
+      color: $dark-A
+      border: 4px solid $dark-A
+    h3
+      color: $dark-A
+
+#project-2
+  h3
+    color: $dark-A
+
+  .link-arrow
+    .glyphicon
+      color: $dark-A
+      border: 4px solid $dark-A
+
+  .link-arrow:hover
+    .glyphicon
+      color: $strong
+      border: 4px solid $strong
+    h3
+      color: $strong
+
+
+.link-arrow
+  h3
+    margin-top: 35px
+
   .glyphicon
-    color: #77B9E8
-    border: 4px solid #77B9E8
+    color: $strong
+    border: 4px solid $strong
     border-radius: 50%
     font-size: 60px
     height: 120px
     line-height: 110px
     width: 120px
 
-    -webkit-animation-name: whitePulse
+    -webkit-animation-name: pulse
     -webkit-animation-duration: 1.4s
     -webkit-animation-iteration-count: infinite
-
-  .glyphicon:hover
-    color: #FFF9CC
-    border: 4px solid #FFF9CC
-
-@media(max-width:991px)
-  #cv
-    h2
-      margin-top: 4px
-    
-@media(max-width:768px)
-  #cv
-    h2
-      margin-top: 0px
-      margin-bottom: 40px
 
 #information
   background: url(images/circuit_span.jpg) no-repeat center center fixed
@@ -302,16 +331,16 @@ footer
   to
     opacity: 1
 
-@-webkit-keyframes whitePulse
+@-webkit-keyframes pulse
   from
-    box-shadow: 0 0 9px white
-    -webkit-box-shadow: 0 0 9px white
-    -moz-box-shadow: 0 0 9px white
+    box-shadow: 0 0 9px $dark-A
+    -webkit-box-shadow: 0 0 9px $dark-A
+    -moz-box-shadow: 0 0 9px $dark-A
   50%
-    box-shadow: 0 0 46px white
-    -webkit-box-shadow: 0 0 46px white
-    -moz-box-shadow: 0 0 46px white
+    box-shadow: 0 0 46px $dark-A
+    -webkit-box-shadow: 0 0 46px $dark-A
+    -moz-box-shadow: 0 0 46px $dark-A
   to
-    box-shadow: 0 0 9px white
-    -webkit-box-shadow: 0 0 9px white
-    -moz-box-shadow: 0 0 9px white
+    box-shadow: 0 0 9px $dark-A
+    -webkit-box-shadow: 0 0 9px $dark-A
+    -moz-box-shadow: 0 0 9px $dark-A

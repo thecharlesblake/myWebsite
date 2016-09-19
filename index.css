@@ -12,8 +12,17 @@ h2 {
   font-size: 48px;
   font-weight: 900; }
 
+h3 {
+  font-size: 32px;
+  font-weight: 900; }
+
 .pad-section, .section-type-A, .section-type-B, .section-type-C {
   padding: 80px 0; }
+  .pad-section h2, .section-type-A h2, .section-type-B h2, .section-type-C h2, .pad-section h3, .section-type-A h3, .section-type-B h3, .section-type-C h3 {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .pad-section h3, .section-type-A h3, .section-type-B h3, .section-type-C h3 {
+    margin-bottom: 30px; }
   .pad-section p, .section-type-A p, .section-type-B p, .section-type-C p {
     line-height: 1.8;
     margin-top: 30px;
@@ -21,26 +30,26 @@ h2 {
 
 .section-type-A {
   background-color: white; }
-  .section-type-A h2 {
-    color: #2e4453;
-    padding-left: 15px;
-    padding-right: 15px; }
+  .section-type-A h2, .section-type-A h3 {
+    color: #2e4453; }
   .section-type-A p {
     color: #4f748e; }
 
 .section-type-B {
   background-color: #e9eff3; }
-  .section-type-B h2 {
+  .section-type-B h2, .section-type-B h3 {
     color: #1c2932; }
   .section-type-B p {
     color: #4f748e; }
 
 .section-type-C {
   background-color: #0087be; }
-  .section-type-C h2 {
+  .section-type-C h2, .section-type-C h3 {
     color: white; }
   .section-type-C p {
     color: white; }
+  .section-type-C a {
+    color: #00fff7; }
 
 #home-wrapper {
   background: url(images/london_cover.jpg) no-repeat center center;
@@ -122,34 +131,46 @@ h2 {
 #responsive h2 {
   text-align: left; }
 
-#cv {
-  display: none;
-  background-color: #723B17; }
-  #cv h2 {
-    color: #77B9E8;
-    margin-top: 32px; }
-  #cv .glyphicon {
-    color: #77B9E8;
-    border: 4px solid #77B9E8;
-    border-radius: 50%;
-    font-size: 60px;
-    height: 120px;
-    line-height: 110px;
-    width: 120px;
-    -webkit-animation-name: whitePulse;
-    -webkit-animation-duration: 1.4s;
-    -webkit-animation-iteration-count: infinite; }
-  #cv .glyphicon:hover {
-    color: #FFF9CC;
-    border: 4px solid #FFF9CC; }
+#projects h2 {
+  text-align: center;
+  margin-bottom: 20px; }
 
-@media(max-width:991px) {
-  #cv h2 {
-    margin-top: 4px; } }
-@media(max-width:768px) {
-  #cv h2 {
-    margin-top: 0px;
-    margin-bottom: 40px; } }
+#project-1 h3 {
+  color: #0087be; }
+#project-1 .link-arrow .glyphicon {
+  color: #0087be;
+  border: 4px solid #0087be; }
+#project-1 .link-arrow:hover .glyphicon {
+  color: #2e4453;
+  border: 4px solid #2e4453; }
+#project-1 .link-arrow:hover h3 {
+  color: #2e4453; }
+
+#project-2 h3 {
+  color: #2e4453; }
+#project-2 .link-arrow .glyphicon {
+  color: #2e4453;
+  border: 4px solid #2e4453; }
+#project-2 .link-arrow:hover .glyphicon {
+  color: #0087be;
+  border: 4px solid #0087be; }
+#project-2 .link-arrow:hover h3 {
+  color: #0087be; }
+
+.link-arrow h3 {
+  margin-top: 35px; }
+.link-arrow .glyphicon {
+  color: #0087be;
+  border: 4px solid #0087be;
+  border-radius: 50%;
+  font-size: 60px;
+  height: 120px;
+  line-height: 110px;
+  width: 120px;
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 1.4s;
+  -webkit-animation-iteration-count: infinite; }
+
 #information {
   background: url(images/circuit_span.jpg) no-repeat center center fixed;
   display: table;
@@ -244,18 +265,18 @@ footer {
     opacity: 0; }
   to {
     opacity: 1; } }
-@-webkit-keyframes whitePulse {
+@-webkit-keyframes pulse {
   from {
-    box-shadow: 0 0 9px white;
-    -webkit-box-shadow: 0 0 9px white;
-    -moz-box-shadow: 0 0 9px white; }
+    box-shadow: 0 0 9px #2e4453;
+    -webkit-box-shadow: 0 0 9px #2e4453;
+    -moz-box-shadow: 0 0 9px #2e4453; }
   50% {
-    box-shadow: 0 0 46px white;
-    -webkit-box-shadow: 0 0 46px white;
-    -moz-box-shadow: 0 0 46px white; }
+    box-shadow: 0 0 46px #2e4453;
+    -webkit-box-shadow: 0 0 46px #2e4453;
+    -moz-box-shadow: 0 0 46px #2e4453; }
   to {
-    box-shadow: 0 0 9px white;
-    -webkit-box-shadow: 0 0 9px white;
-    -moz-box-shadow: 0 0 9px white; } }
+    box-shadow: 0 0 9px #2e4453;
+    -webkit-box-shadow: 0 0 9px #2e4453;
+    -moz-box-shadow: 0 0 9px #2e4453; } }
 
 /*# sourceMappingURL=index.css.map */
